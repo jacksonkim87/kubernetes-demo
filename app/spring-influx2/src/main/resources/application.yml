@@ -15,17 +15,18 @@ management:
         include: "*"
         exclude:
         - env
-        - beans
+        - bean
+
 ---
 spring:
   profiles: local
   influx2: 
     url: http://localhost:9999
-    username: onm-user
-    password: onm-password
-    token: gB7CkN4qlX8rUyvPjp_CMVOmNtf70M3hSh4jN-i2Vok0dFWFzDLxUYkFzaktjYMkBHHVYjX7-bqPpAfwSeFALw==
-    org: pictonm
-    bucket: agent-its-bucket
+    username: donghoon
+    password: vhrxks12
+    token: Ct0GUP-9GDLjRjo8lihTMfUmd-fGaJNau2A6cMsUJm-qIaGBG6yFYti3CxkirKlBu79kZUdQHm39kDR8Y8YZIQ==
+    org: khan
+    bucket: demo-bucket
     logLevel: BODY
     readTimeout: 5s
     writeTimeout: 5s
