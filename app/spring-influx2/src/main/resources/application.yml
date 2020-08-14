@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: local
+management:
+  health:
+    influxdb:
+      enabled: true
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+        exclude:
+        - env
+        - beans
+---
+spring:
+  profiles: local
+  influx2: 
+    url: http://localhost:9999
+    username: onm-user
+    password: onm-password
+    token: gB7CkN4qlX8rUyvPjp_CMVOmNtf70M3hSh4jN-i2Vok0dFWFzDLxUYkFzaktjYMkBHHVYjX7-bqPpAfwSeFALw==
+    org: pictonm
+    bucket: agent-its-bucket
+    logLevel: BODY
+    readTimeout: 5s
+    writeTimeout: 5s
+    connectTimeout: 5s
+
+server:
+  port: 8080
