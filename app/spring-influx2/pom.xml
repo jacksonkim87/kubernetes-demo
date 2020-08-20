@@ -32,7 +32,12 @@
             <groupId>com.influxdb</groupId>
             <artifactId>influxdb-client-java</artifactId>
             <version>1.8.0</version>
-          </dependency>
+        </dependency>
+        <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>com.influxdb</groupId>
             <artifactId>influxdb-spring</artifactId>

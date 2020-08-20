@@ -23,10 +23,28 @@ spring:
   influx2: 
     url: http://localhost:9999
     username: donghoon
-    password: vhrxks12
-    token: Ct0GUP-9GDLjRjo8lihTMfUmd-fGaJNau2A6cMsUJm-qIaGBG6yFYti3CxkirKlBu79kZUdQHm39kDR8Y8YZIQ==
+    password: password
+    token: token
     org: khan
     bucket: demo-bucket
+    logLevel: BODY
+    readTimeout: 5s
+    writeTimeout: 5s
+    connectTimeout: 5s
+
+server:
+  port: 8080
+
+---
+spring:
+  profiles: k8s
+  influx2: 
+    url: ${INFLUX2_URL}
+    username: ${INFLUX2_USERNAME}
+    password: ${INFLUX2_PASSWORD}
+    token: ${INFLUX2_TOKEN}
+    org: ${INFLUX2_ORG}
+    bucket: ${INFLUX2_BUCKET}
     logLevel: BODY
     readTimeout: 5s
     writeTimeout: 5s
